@@ -1,0 +1,8 @@
+input_path: ./tests/fixtures/transactions.csv
+output_dir: ./dist/output_parquet
+output:
+  type: parquet
+  path: ./dist/output_parquet
+mlflow:
+  enabled: false
+  experiment: ideia
