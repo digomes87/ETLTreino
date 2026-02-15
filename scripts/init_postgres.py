@@ -1,5 +1,11 @@
 import os
+from pathlib import Path
+
+from dotenv import load_dotenv
 import psycopg
+
+_CONFIG_DIR = Path(__file__).resolve().parents[1] / "config"
+load_dotenv(_CONFIG_DIR / ".env")
 
 DB_NAME = os.getenv("PG_DB", "postgres")
 ADMIN_DB = os.getenv("PG_ADMIN_DB", "postgres")
