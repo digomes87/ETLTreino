@@ -1,11 +1,13 @@
 import os
 import shutil
+from typing import Any, Generator
+
 import pytest
 from pyspark.sql import SparkSession
 
 
 @pytest.fixture(scope="session")
-def spark() -> SparkSession:
+def spark() -> Generator[SparkSession, Any, None]:
     active = SparkSession.getActiveSession()
     if active is not None:
         active.stop()
