@@ -5,4 +5,4 @@ output:
   path: ./dist/output_parquet
 mlflow:
   enabled: false
-  experiment: ideia
+  experiment: idea
