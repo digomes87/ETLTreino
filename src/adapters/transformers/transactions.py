@@ -3,7 +3,7 @@ from pyspark.sql.functions import col, upper, to_date, month
 from core.interfaces import Transformer
 
 
-class TransactionsTransformer(Transformer):
+class TransactionTransformer(Transformer):
     def transform(self, df: DataFrame) -> DataFrame:
         return(
             df.withColumn("currency", upper(col("currency")))
