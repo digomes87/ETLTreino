@@ -1,3 +1,3 @@
-from .mlflow_monitor import MLflowMonitor
+from .mlflow_monitor import MflowMonitor
 
-__all__ = ["MLflowMonitor"]
+__all__ = ["MflowMonitor"]

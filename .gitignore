@@ -1,3 +1,5 @@
 .venvETLTreino
 .idea
 .env
+
+*__pycache__
