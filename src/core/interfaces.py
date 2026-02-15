@@ -15,7 +15,8 @@ class Validator(Protocol):
 
 
 class Reporter(Protocol):
-    def report(self, df: DataFrame) -> None: ...
+    def write(self, df: DataFrame) -> None: ...
+
 
 
 class HealthMonitor(Protocol):
