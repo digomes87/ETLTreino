@@ -1,0 +1,5 @@
+id,product,amount,currency,timestamp,status
+1,credit_card,100.50,usd,2025-12-31T23:59:59,posted
+2,personal_loan,2000.00,BRL,2026-01-01T10:00:00,pending
+3,mortgage,500000.00,EUR,2026-01-02T12:30:00,reversed
+4,auto_loan,15000.00,GBP,2026-01-03T09:15:00,posted
