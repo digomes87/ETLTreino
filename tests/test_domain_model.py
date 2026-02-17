@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from domain import Transaction
 
 
@@ -34,9 +34,6 @@ def test_transaction_preserves_provided_timestamp_exactly():
     assert t.timestamp == ts
 
 
-from datetime import datetime
-import pytest
-from domain import Transaction
 
 
 # @pytest.fixture
@@ -66,3 +63,30 @@ from domain import Transaction
 #         status="pending",
 #     )
 #     assert t.timestamp == fixed_ts
+
+def test_transaction_accepts_past_end_future_timestamp():
+    now = datetime.now()
+    past = now - timedelta(days=365)
+    future = now + timedelta(days=365)
+
+
+    past_tx = Transaction(
+        id="past",
+        product="mortgage",
+        amount=2000.0,
+        currency="GBP",
+        timestamp=past,
+        status="posted",
+    )
+
+    future_tx = Transaction(
+        id="future",
+        product="auto_loan",
+        amount=3000.0,
+        currency="BRL",
+        timestamp=future,
+        status="pending",
+    )
+
+    assert past_tx.timestamp == past
+    assert future_tx.timestamp == future
