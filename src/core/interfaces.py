@@ -18,6 +18,5 @@ class Reporter(Protocol):
     def write(self, df: DataFrame) -> None: ...
 
 
-
 class HealthMonitor(Protocol):
     def report_metrics(self, metrics: Mapping[str, Any]) -> None: ...

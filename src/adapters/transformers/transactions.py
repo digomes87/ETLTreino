@@ -5,7 +5,7 @@ from core.interfaces import Transformer
 
 class TransactionTransformer(Transformer):
     def transform(self, df: DataFrame) -> DataFrame:
-        return(
+        return (
             df.withColumn("currency", upper(col("currency")))
             .withColumn("date", to_date(col("timestamp")))
             .withColumn("month", month(col("timestamp")))

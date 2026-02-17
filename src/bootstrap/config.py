@@ -11,4 +11,3 @@ def load_config(path: Optional[str]) -> Dict[str, Any]:
 
     with p.open("r", encoding="utf-8") as f:
         return yaml.safe_load(f) or {}
-

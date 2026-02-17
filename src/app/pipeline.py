@@ -1,13 +1,8 @@
 from dataclasses import dataclass
 from time import perf_counter
 from typing import Optional, Mapping, Any
-from core.interfaces import (
-    DataReader,
-    Transformer,
-    Validator,
-    Reporter,
-    HealthMonitor
-)
+from core.interfaces import DataReader, Transformer, Validator, Reporter, HealthMonitor
+
 
 @dataclass
 class Pipeline:

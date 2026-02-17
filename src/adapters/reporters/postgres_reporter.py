@@ -14,7 +14,9 @@ load_dotenv(_CONFIG_DIR / ".env")
 def _required_env(name: str) -> str:
     value = os.getenv(name)
     if value is None:
-        raise RuntimeError(f"Environment variable {name} is required for PostgresReporter")
+        raise RuntimeError(
+            f"Environment variable {name} is required for PostgresReporter"
+        )
     return value
 
 
