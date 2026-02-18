@@ -1,4 +1,4 @@
-from .transactions import TransactionsTransformer
+from .transactions import TransactionTransformer
 
 
-__all__ = ["TransactionsTransformer"]
+__all__ = ["TransactionTransformer"]
