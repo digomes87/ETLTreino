@@ -12,7 +12,7 @@ def spark() -> Generator[SparkSession, Any, None]:
         active.stop()
     spark = (
         SparkSession.builder.master("local[2]")
-        .appName("IdeiaPipelineTests")
+        .appName("IdeaPipelineTests")
         .config("spark.sql.shuffle.partitions", "2")
         .getOrCreate()
     )
