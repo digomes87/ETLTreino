@@ -77,5 +77,6 @@ def main():
         logging.exception("Pipeline failed")
         raise e
 
-    if __name__ == "__main__":
-        main()
+
+if __name__ == "__main__":
+    main()
