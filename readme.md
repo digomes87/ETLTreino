@@ -1,5 +1,7 @@
 # ETL Treino – Spark-Based Data Pipeline
 
+![ETL Treino Architecture](./EtlTreino.png)
+
 ## Overview
 
 ETL Treino is a small but production-oriented data pipeline written in Python and PySpark.  
