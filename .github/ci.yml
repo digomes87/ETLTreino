@@ -19,4 +19,8 @@ jobs:
           uv venv .venvETLTreino
           uv pip install -p .venvETLTreino/bin/python -r requirements.txt
       - name: Run tests
+        env:
+          PYTHONPATH: ./src
+          PYSPARK_PYTHON: .venvETLTreino/bin/python
+          PYSPARK_DRIVER_PYTHON: .venvETLTreino/bin/python
         run: .venvETLTreino/bin/pytest -q
